@@ -1,6 +1,6 @@
-// =========================
-// Loader
-// =========================
+// ======================================
+// LOADER
+// ======================================
 
 window.addEventListener("load", () => {
 
@@ -13,88 +13,106 @@ window.addEventListener("load", () => {
 });
 
 
-// =========================
-// Background Music
-// =========================
+// ======================================
+// BACKGROUND MUSIC + START BUTTON
+// ======================================
 
 const music = document.getElementById("bgMusic");
+let typedStarted = false;
 
 document.getElementById("startBtn").addEventListener("click", () => {
 
+    // Play music
     music.play();
 
+    // Scroll to intro
     document.getElementById("intro").scrollIntoView({
         behavior: "smooth"
     });
 
+    // Start typing only once
+    if (!typedStarted) {
+
+        typedStarted = true;
+
+        new Typed("#typed-text", {
+
+            strings: [
+
+                "Once upon a time... ❤️",
+
+                "There was a nervous boy...",
+
+                "Holding a bouquet of flowers... 🌹",
+
+                "Wondering if the prettiest girl would smile...",
+
+                "She did... ❤️",
+
+                "That smile changed my entire life.",
+
+                "15 Months Later...",
+
+                "I'm still falling in love with you every single day.",
+
+                "Happy 15 Months, My Baby ❤️"
+
+            ],
+
+            typeSpeed: 50,
+
+            backSpeed: 0,
+
+            loop: false,
+
+            showCursor: true
+
+        });
+
+    }
+
 });
 
 
-
-// =========================
-// Typewriter
-// =========================
-
-new Typed("#typed-text", {
-
-    strings: [
-
-        "Once upon a time... ❤️",
-
-        "There was a nervous boy carrying a bouquet... 🌹",
-
-        "He was wondering if the prettiest girl would smile...",
-
-        "She did... ❤️",
-
-        "And that single smile changed his whole world.",
-
-        "Happy 15 Months, My Baby ❤️"
-
-    ],
-
-    typeSpeed: 45,
-
-    backSpeed: 0,
-
-    loop: false,
-
-    showCursor: true
-
-});
-
-
-
-// =========================
-// Reasons
-// =========================
+// ======================================
+// REASONS I LOVE YOU
+// ======================================
 
 const reasons = [
 
-"Because your smile lights up my world ❤️",
+    "Because your smile brightens my darkest days ❤️",
 
-"Because you become my tiny little baby 🥹",
+    "Because you become my tiny little baby 🥹",
 
-"Because you randomly beat me 😂",
+    "Because you randomly beat me 😂",
 
-"Because every hug feels like home.",
+    "Because every hug feels like home.",
 
-"Because you understand me.",
+    "Because your laugh is my favorite sound.",
 
-"Because you support my dreams.",
+    "Because you always support me.",
 
-"Because your voice makes everything better.",
+    "Because you believe in me.",
 
-"Because you make ordinary days magical.",
+    "Because you're beautiful inside and out.",
 
-"Because I can be myself with you.",
+    "Because I can be completely myself around you.",
 
-"Because you're my favorite person."
+    "Because every moment with you becomes a beautiful memory.",
+
+    "Because your eyes tell stories.",
+
+    "Because you make ordinary days extraordinary.",
+
+    "Because you're my peace.",
+
+    "Because you're my safe place.",
+
+    "Because I simply can't imagine my life without you ❤️"
 
 ];
 
 const reasonBtn = document.getElementById("reasonBtn");
-
 const reasonText = document.getElementById("reasonText");
 
 reasonBtn.addEventListener("click", () => {
@@ -106,10 +124,9 @@ reasonBtn.addEventListener("click", () => {
 });
 
 
-
-// =========================
-// Voice Message
-// =========================
+// ======================================
+// VOICE MESSAGE
+// ======================================
 
 const voice = document.getElementById("voiceMessage");
 
@@ -120,28 +137,94 @@ document.getElementById("voiceBtn").addEventListener("click", () => {
 });
 
 
+// ======================================
+// GSAP INTRO ANIMATION
+// ======================================
 
-// =========================
-// GSAP Animation
-// =========================
-
-gsap.from("section", {
+gsap.from("#hero h3", {
 
     opacity: 0,
 
-    y: 60,
+    y: -50,
+
+    duration: 1
+
+});
+
+gsap.from("#hero h1", {
+
+    opacity: 0,
+
+    y: 50,
 
     duration: 1,
 
-    stagger: 0.2
+    delay: 0.4
+
+});
+
+gsap.from("#hero p", {
+
+    opacity: 0,
+
+    duration: 1,
+
+    delay: 0.8
+
+});
+
+gsap.from("#startBtn", {
+
+    opacity: 0,
+
+    scale: 0,
+
+    duration: 1,
+
+    delay: 1.2
 
 });
 
 
+// ======================================
+// FADE-IN SECTIONS
+// ======================================
 
-// =========================
-// Confetti
-// =========================
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.2
+
+});
+
+sections.forEach(section => {
+
+    section.style.opacity = "0";
+    section.style.transform = "translateY(60px)";
+    section.style.transition = "1s";
+
+    observer.observe(section);
+
+});
+
+
+// ======================================
+// CONFETTI
+// ======================================
 
 document.getElementById("finalBtn").addEventListener("click", () => {
 
@@ -156,6 +239,23 @@ document.getElementById("finalBtn").addEventListener("click", () => {
             y: 0.6
 
         }
+
+    });
+
+});
+
+
+// ======================================
+// PHOTO CLICK EFFECT
+// ======================================
+
+const photos = document.querySelectorAll(".gallery img");
+
+photos.forEach(photo => {
+
+    photo.addEventListener("click", () => {
+
+        photo.classList.toggle("zoom");
 
     });
 
