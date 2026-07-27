@@ -4,77 +4,519 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>For My Baby ❤️</title>
+    <title>Happy 15 Months ❤️ | Bhumi & Dhruv</title>
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700;900&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
 <body>
 
-<div class="background"></div>
+<!-- ================= Loader ================= -->
 
-<section class="hero">
+<div id="loader">
 
-    <h3>To My Favorite Person ❤️</h3>
+    <div class="heart-loader">❤️</div>
 
-    <h1>Happy 15 Months</h1>
+    <h2>Loading Our Beautiful Memories...</h2>
+
+</div>
+
+<!-- Floating Hearts -->
+
+<div id="hearts"></div>
+
+<!-- Background Music -->
+
+<audio id="bgMusic" loop>
+
+    <source src="bg.mp3" type="audio/mpeg">
+
+</audio>
+
+<!-- Voice Message -->
+
+<audio id="voiceMessage">
+
+    <source src="voice.mp3" type="audio/mpeg">
+
+</audio>
+
+<!-- ================= HERO ================= -->
+
+<section id="hero">
+
+<div class="hero-content">
+
+<h3>For My Baby ❤️</h3>
+
+<h1>
+
+Happy
+
+<span>15 Months</span>
+
+Together
+
+</h1>
+
+<p>
+
+From the boy who nervously carried a bouquet 🌹
+
+to the man who thanks God every day
+
+for sending him you.
+
+</p>
+
+<button id="startBtn">
+
+Open My Heart ❤️
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= STORY ================= -->
+
+<section id="story">
+
+<h2>
+
+Our Story
+
+</h2>
+
+<div id="typed-text"></div>
+
+</section>
+
+<!-- ================= COUNTER ================= -->
+
+<section id="counterSection">
+
+<h2>
+
+We've Been Together
+
+</h2>
+
+<div class="counter-box">
+
+<div>
+
+<h1 id="days">0</h1>
+
+<p>Days</p>
+
+</div>
+
+<div>
+
+<h1 id="hours">0</h1>
+
+<p>Hours</p>
+
+</div>
+
+<div>
+
+<h1 id="minutes">0</h1>
+
+<p>Minutes</p>
+
+</div>
+
+<div>
+
+<h1 id="seconds">0</h1>
+
+<p>Seconds</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= MEMORY ================= -->
+
+<section id="memory">
+
+<h2>
+
+Some Of My Favorite Memories ❤️
+
+</h2>
+
+<div class="memory-card">
+
+<img id="memoryImage" src="photo1.jpg">
+
+<h3 id="memoryTitle">
+
+The Beginning ❤️
+
+</h3>
+
+<p id="memoryDescription">
+
+Every beautiful story has a beginning.
+
+Mine started with you.
+
+</p>
+
+<button id="nextMemory">
+
+Next Memory ❤️
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery">
+
+<h2>
+
+Our Gallery 📷
+
+</h2>
+
+<div class="gallery-grid">
+
+<img src="photo1.jpg" class="gallery-img">
+
+<img src="photo2.jpg" class="gallery-img">
+
+<img src="photo3.jpg" class="gallery-img">
+
+<img src="photo4.jpg" class="gallery-img">
+
+<img src="photo5.jpg" class="gallery-img">
+
+<img src="photo6.jpg" class="gallery-img">
+
+<img src="photo7.jpg" class="gallery-img">
+
+<img src="photo8.jpg" class="gallery-img">
+
+<img src="photo9.jpg" class="gallery-img">
+
+</div>
+
+</section>
+
+<!-- ================= LIGHTBOX ================= -->
+
+<div id="lightbox">
+
+<span id="closeLightbox">
+
+&times;
+
+</span>
+
+<img id="lightboxImg">
+
+</div>
+
+<!-- ================= REASONS ================= -->
+
+<section id="reasons">
+
+    <h2>100 Reasons Why I Love You ❤️</h2>
+
+    <p class="section-subtitle">
+        Click the heart and discover one reason at a time...
+    </p>
+
+    <div class="reason-card">
+
+        <div id="reasonText">
+
+            Because your smile makes my entire world brighter. ❤️
+
+        </div>
+
+        <button id="reasonBtn">
+
+            ❤️ Show Another Reason
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= BABY MODE ================= -->
+
+<section id="baby">
+
+    <h2>My Favorite Version Of You 🥹</h2>
+
+    <h3>Baby Mode Activated ❤️</h3>
 
     <p>
 
-        From the nervous boy holding a bouquet 🌹
+        My favorite version of you isn't when you're dressed up...
 
-        to the happiest man because of you.
+        It isn't when you're taking pictures...
+
+        It isn't even when you're trying to act mature...
+
+        It's when you suddenly become my little baby...
+
+        When you make those cute faces...
+
+        When you get stubborn...
+
+        When you randomly hit me 😂...
+
+        And then look at me with those innocent eyes.
+
+        That's the version I'll always protect.
 
     </p>
 
-    <button id="start">
+</section>
 
-        Open My Heart ❤️
+
+
+<!-- ================= LOVE LETTER ================= -->
+
+<section id="letter">
+
+    <h2>A Letter To My Baby 💌</h2>
+
+    <div class="letter">
+
+        <p>
+
+            Dear Bhumi,
+
+            <br><br>
+
+            Happy 15 Months, Baby ❤️
+
+            <br><br>
+
+            I still remember how nervous I was before meeting you.
+
+            Holding that bouquet...
+
+            Thinking about a thousand different things...
+
+            Wondering if everything would go well.
+
+            <br><br>
+
+            And then...
+
+            You smiled.
+
+            <br><br>
+
+            That one smile changed everything.
+
+            <br><br>
+
+            These 15 months have given me countless memories,
+
+            laughter,
+
+            comfort,
+
+            happiness,
+
+            and a love I never knew I needed.
+
+            <br><br>
+
+            Thank you for being my best friend,
+
+            my biggest supporter,
+
+            my peace,
+
+            my happiness,
+
+            and my home.
+
+            <br><br>
+
+            Whether you're laughing,
+
+            teasing me,
+
+            becoming my little baby,
+
+            or randomly beating me 😂,
+
+            every version of you is precious to me.
+
+            <br><br>
+
+            I promise to keep choosing you,
+
+            supporting you,
+
+            respecting you,
+
+            and loving you,
+
+            every single day.
+
+            <br><br>
+
+            Happy 15 Months, My Love.
+
+            <br><br>
+
+            Forever Yours,
+
+            <br>
+
+            ❤️ Dhruv
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= VOICE ================= -->
+
+<section id="voice">
+
+    <h2>One Last Surprise 🎙️</h2>
+
+    <p>
+
+        I wanted you to hear my voice too...
+
+    </p>
+
+    <button id="voiceBtn">
+
+        ▶ Play My Voice
 
     </button>
 
 </section>
 
-<section class="story">
 
-    <div class="story-text">
 
-        I still remember the first day...
+<!-- ================= FUTURE ================= -->
 
-        <br><br>
+<section id="future">
 
-        I was nervous.
+    <h2>Things I Want To Do With You ❤️</h2>
 
-        <br>
+    <div class="future-grid">
 
-        My hands were shaking.
+        <div class="future-card">🌍 Travel Together</div>
 
-        <br>
+        <div class="future-card">☕ Late Night Coffee Dates</div>
 
-        I kept wondering...
+        <div class="future-card">📸 Fill Thousands Of Photos</div>
 
-        <br><br>
+        <div class="future-card">🎂 Celebrate Every Anniversary</div>
 
-        "Will she smile?"
+        <div class="future-card">🌸 Give You More Flowers</div>
 
-        <br><br>
-
-        She did.
-
-        <br><br>
-
-        And my life has never been the same since. ❤️
+        <div class="future-card">🤍 Keep Making You Smile</div>
 
     </div>
 
 </section>
+
+
+
+<!-- ================= FINAL ================= -->
+
+<section id="final">
+
+    <h3>One Last Thing...</h3>
+
+    <h1>
+
+        I'd Choose You
+
+        <br>
+
+        Again.
+
+        <br>
+
+        And Again.
+
+        <br>
+
+        And Forever.
+
+        ❤️
+
+    </h1>
+
+    <button id="finalBtn">
+
+        I Love You ❤️
+
+    </button>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    Made with ❤️ by Dhruv
+
+    <br>
+
+    Happy 15 Months Baby 🌸
+
+</footer>
+
+
+
+<!-- ================= LIBRARIES ================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
 <script src="script.js"></script>
 
